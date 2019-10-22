@@ -28,6 +28,9 @@ end
 
 activate :sprockets
 
+# Activate Localization(i18n)
+activate :i18n
+
 activate :autoprefixer do |config|
   config.browsers = ['last 2 version', 'Firefox ESR']
   config.cascade  = false
