@@ -7,13 +7,15 @@ class UniqueHeadCounter < Middleman::Renderers::MiddlemanRedcarpetHTML
     @head_count = {}
   end
   def header(text, header_level)
-    friendly_text = text.gsub(/<[^>]*>/,"").parameterize
-    if friendly_text.strip.length == 0
+    # friendly_text = text.gsub(/<[^>]*>/,"").parameterize
+    # if friendly_text.strip.length == 0
       # Looks like parameterize removed the whole thing! It removes many unicode
       # characters like Chinese and Russian. To get a unique URL, let's just
       # URI escape the whole header
-      friendly_text = Digest::SHA1.hexdigest(text)[0,10]
-    end
+    header_level_new = header_level.to_s
+    text_new = text + header_level_new
+    friendly_text = Digest::SHA1.hexdigest(text_new)[0,10]
+    # end
     @head_count[friendly_text] ||= 0
     @head_count[friendly_text] += 1
     if @head_count[friendly_text] > 1
@@ -22,3 +24,9 @@ class UniqueHeadCounter < Middleman::Renderers::MiddlemanRedcarpetHTML
     return "<h#{header_level} id='#{friendly_text}'>#{text}</h#{header_level}>"
   end
 end
+
+cust1 = UniqueHeadCounter.new
+
+out = cust1.header('Bruce', 1)
+
+puts out
