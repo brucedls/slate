@@ -6,7 +6,7 @@ It provides users with a set of simple and powerful development tools, designed 
 
 ### Trading pair
 
-Expressions: `XXX_YYY`，where `XXX` is the base currency while `YYY` is the quote currency.
+Expression: `XXX_YYY`，where `XXX` is the base currency while `YYY` is the quote currency.
 
 For example: In the `ETH_BTC` pair, `ETH` is the base currency while `BTC` is the quote currency.
 
@@ -15,13 +15,13 @@ For example: In the `ETH_BTC` pair, `ETH` is the base currency while `BTC` is th
 * Buy
 * Sell
 
-### Order type（orderType : 限价:limit; 市价:market）
+### Order type（orderType : limit; market）
 
 * A limit order refers to an order where the buy and sell prices are limited, that is, the maximum price is set when buying the base currency and the minimum price is set when selling the base currency. In addition to the price limit, a limit order transaction must also limit the quantity of the transaction base currency.
 
 * A market order refers to an order where the buy or sell prices are not limited, that is, to buy or sell at the current market price, wherein the buy market order must limit the amount of the quote currency to buy; sell market order must limit the amount of the base currency to sell.
 
-### Order mode（OrderMode : 标准模式:0; 止损:10; 止盈:11; 移动止损:20）
+### Order mode（OrderMode : Standard:0; stop-loss limit order:10; take-profit limit order:11; trailing stop order:20）
 
 * Standard：Default order mode.
 
@@ -29,15 +29,11 @@ For example: In the `ETH_BTC` pair, `ETH` is the base currency while `BTC` is th
 
 * Similar to a stop-loss limit order, a take-profit limit order is an order that sells or closes positions at a set price after the market has reached a specified price which is used to control profits.
 
-* A stop-loss market order is an order that sells or closes positions at the market price after the market has reached a specified price which is used to control losses.
-
-* Similar to a stop-loss market order, a take-profit market order is an order that sells or closes positions at the market price after the market has reached a specified price which is used to control profits.
-
 * A trailing stop order is similar to stop market order, where you need to specify the trailing value differential to the trigger price, and if triggered then a market order will be placed.
 
 Note: a positive Trail value indicates a trailing buy whilst a negative trail value indicates a trailing sell.
 
-### Order property（OrderProperty : 标准属性:0; FAK:1; FOK:2; POST-ONLY:3）：
+### Order property（OrderProperty : Standard:0; FAK:1; FOK:2; POST-ONLY:3）：
 
 * Standard : Default order property
 
@@ -160,7 +156,7 @@ The format of the return data is:
 
 Some APIs provide a pagination query. All API calls with the following request parameter name support pagination queries. Please see the following:
 
-| Parameters	| 描述|
+| Parameters	| Description|
 |----------|--------|
 | pageIndex	| Current page|
 | pageSize	| The maximum number of strings on each page is 100|

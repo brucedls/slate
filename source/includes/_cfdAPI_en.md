@@ -4,7 +4,7 @@
 
 ## Position
 
-### 所有合约持仓信息
+### Get all positions infomation
 
 
 
@@ -24,7 +24,7 @@
 
 | Parameters        | Type | Required |         Description         |
 |---------------|----------|----------|:--------------------:|
-| instrument_id | String   | Yes       | 合约名称，如 BTC_USD |
+| instrument_id | String   | Yes       | Instrument ID，for example: BTC_USD |
 
 #### Response Parameters
 
@@ -51,13 +51,13 @@
 
 | Parameters        | Type |         Description         |
 |---------------|----------|:--------------------:|
-| instrument_id | String   | 合约名称，如 BTC_USD |
+| instrument_id | String   | Instrument ID，for example: BTC_USD |
 
 
 
 
 
-### 单个合约持仓信息
+### Get Position Info
 
 获取某个合约的持仓信息
 
