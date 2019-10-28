@@ -205,7 +205,7 @@
     
     <div class="navbar-container">      
       <nav class="navbar">
-        <a class="logo-container" href="/">
+        <a class="logo-container" href="">
         <img src="//static.idaxstatic.com/pcimg/home/logoWhite20190228.svg" alt>
         </a>   
            
@@ -254,13 +254,13 @@
                               <a href="#82c659cb31" class="toc-h3 toc-link" data-title="Order side">Order side</a>
                             </li>
                             <li>
-                              <a href="#919c55aa1e" class="toc-h3 toc-link" data-title="Order type（orderType : 限价:limit; 市价:market）">Order type（orderType : 限价:limit; 市价:market）</a>
+                              <a href="#0bfde0ebd8" class="toc-h3 toc-link" data-title="Order type（orderType : limit; market）">Order type（orderType : limit; market）</a>
                             </li>
                             <li>
-                              <a href="#8a627578e2" class="toc-h3 toc-link" data-title="Order mode（OrderMode : 标准模式:0; 止损:10; 止盈:11; 移动止损:20）">Order mode（OrderMode : 标准模式:0; 止损:10; 止盈:11; 移动止损:20）</a>
+                              <a href="#83636d25e6" class="toc-h3 toc-link" data-title="Order mode（OrderMode : Standard:0; stop-loss limit order:10; take-profit limit order:11; trailing stop order:20）">Order mode（OrderMode : Standard:0; stop-loss limit order:10; take-profit limit order:11; trailing stop order:20）</a>
                             </li>
                             <li>
-                              <a href="#007497eeaf" class="toc-h3 toc-link" data-title="Order property（OrderProperty : 标准属性:0; FAK:1; FOK:2; POST-ONLY:3）：">Order property（OrderProperty : 标准属性:0; FAK:1; FOK:2; POST-ONLY:3）：</a>
+                              <a href="#147488d962" class="toc-h3 toc-link" data-title="Order property（OrderProperty : Standard:0; FAK:1; FOK:2; POST-ONLY:3）：">Order property（OrderProperty : Standard:0; FAK:1; FOK:2; POST-ONLY:3）：</a>
                             </li>
                             <li>
                               <a href="#1bb429c223" class="toc-h3 toc-link" data-title="Rules">Rules</a>
@@ -464,10 +464,10 @@
                     <a href="#616805b092" class="toc-h2 toc-link" data-title="Position">Position</a>
                         <ul class="toc-list-h3">
                             <li>
-                              <a href="#2baa55e335" class="toc-h3 toc-link" data-title="所有合约持仓信息">所有合约持仓信息</a>
+                              <a href="#6665ff8be8" class="toc-h3 toc-link" data-title="Get all positions infomation">Get all positions infomation</a>
                             </li>
                             <li>
-                              <a href="#8974b4c0bd" class="toc-h3 toc-link" data-title="单个合约持仓信息">单个合约持仓信息</a>
+                              <a href="#c4b465bd44" class="toc-h3 toc-link" data-title="Get Position Info">Get Position Info</a>
                             </li>
                         </ul>
                   </li>
@@ -592,7 +592,7 @@
         <h1 id='c8d79beaef'>API Overview</h1>
 <p>It provides users with a set of simple and powerful development tools, designed to help users quickly and efficiently integrate IDAX tickers and transaction functions into their own applications. IDAX interface is the basis for providing services. After creating accounts on the IDAX website, developers can establish APIs with different authority based on their own needs, and use APIs to conduct automatic transactions. The following functions can be realized quickly through APIs: Once obtaining access to the interface, you can help with the development by reading the interface documentation. If you have any problems in the process of using, please contact us and we will give you a feedback as soon as possible.</p>
 <h2 id='0afca206d7'>Matching engine</h2><h3 id='7e303dbcc2'>Trading pair</h3>
-<p>Expressions: <code>XXX_YYY</code>，where <code>XXX</code> is the base currency while <code>YYY</code> is the quote currency.</p>
+<p>Expression: <code>XXX_YYY</code>，where <code>XXX</code> is the base currency while <code>YYY</code> is the quote currency.</p>
 
 <p>For example: In the <code>ETH_BTC</code> pair, <code>ETH</code> is the base currency while <code>BTC</code> is the quote currency.</p>
 <h3 id='82c659cb31'>Order side</h3>
@@ -600,23 +600,21 @@
 <li>Buy</li>
 <li>Sell</li>
 </ul>
-<h3 id='919c55aa1e'>Order type（orderType : 限价:limit; 市价:market）</h3>
+<h3 id='0bfde0ebd8'>Order type（orderType : limit; market）</h3>
 <ul>
 <li><p>A limit order refers to an order where the buy and sell prices are limited, that is, the maximum price is set when buying the base currency and the minimum price is set when selling the base currency. In addition to the price limit, a limit order transaction must also limit the quantity of the transaction base currency.</p></li>
 <li><p>A market order refers to an order where the buy or sell prices are not limited, that is, to buy or sell at the current market price, wherein the buy market order must limit the amount of the quote currency to buy; sell market order must limit the amount of the base currency to sell.</p></li>
 </ul>
-<h3 id='8a627578e2'>Order mode（OrderMode : 标准模式:0; 止损:10; 止盈:11; 移动止损:20）</h3>
+<h3 id='83636d25e6'>Order mode（OrderMode : Standard:0; stop-loss limit order:10; take-profit limit order:11; trailing stop order:20）</h3>
 <ul>
 <li><p>Standard：Default order mode.</p></li>
 <li><p>A stop-loss limit order is an order that sells or closes positions at a set price after the market has reached a specified price which is used to control losses.</p></li>
 <li><p>Similar to a stop-loss limit order, a take-profit limit order is an order that sells or closes positions at a set price after the market has reached a specified price which is used to control profits.</p></li>
-<li><p>A stop-loss market order is an order that sells or closes positions at the market price after the market has reached a specified price which is used to control losses.</p></li>
-<li><p>Similar to a stop-loss market order, a take-profit market order is an order that sells or closes positions at the market price after the market has reached a specified price which is used to control profits.</p></li>
 <li><p>A trailing stop order is similar to stop market order, where you need to specify the trailing value differential to the trigger price, and if triggered then a market order will be placed.</p></li>
 </ul>
 
 <p>Note: a positive Trail value indicates a trailing buy whilst a negative trail value indicates a trailing sell.</p>
-<h3 id='007497eeaf'>Order property（OrderProperty : 标准属性:0; FAK:1; FOK:2; POST-ONLY:3）：</h3>
+<h3 id='147488d962'>Order property（OrderProperty : Standard:0; FAK:1; FOK:2; POST-ONLY:3）：</h3>
 <ul>
 <li><p>Standard : Default order property</p></li>
 <li><p>FAK (Fill and Kill) - FAK orders are immediately executed against resting orders. Any quantity that remains unfilled is canceled.</p></li>
@@ -711,7 +709,7 @@
 <table><thead>
 <tr>
 <th>Parameters</th>
-<th>描述</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -2866,7 +2864,7 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 </tbody></table>
 <h1 id='38fc5be34e'>Perpetual API</h1>
 <p>永续合约交易的行情信息，账户信息，订单操作，订单查询，账单明细查询</p>
-<h2 id='616805b092'>Position</h2><h3 id='2baa55e335'>所有合约持仓信息</h3>
+<h2 id='616805b092'>Position</h2><h3 id='6665ff8be8'>Get all positions infomation</h3>
 <p>获取账户所有合约的持仓信息。请求此接口，会在数据库遍历所有币对下的持仓数据，有大量的性能消耗,请求频率较低。建议用户传合约ID获取持仓信息。</p>
 <h4 id='32b9b8d005'>Rate Limit</h4>
 <p>5 requests per second</p>
@@ -2885,7 +2883,7 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <td>instrument_id</td>
 <td>String</td>
 <td>Yes</td>
-<td style="text-align: center">合约名称，如 BTC_USD</td>
+<td style="text-align: center">Instrument ID，for example: BTC_USD</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6'>Response Parameters</h4>
@@ -2919,10 +2917,10 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <td>instrument_id</td>
 <td>String</td>
-<td style="text-align: center">合约名称，如 BTC_USD</td>
+<td style="text-align: center">Instrument ID，for example: BTC_USD</td>
 </tr>
 </tbody></table>
-<h3 id='8974b4c0bd'>单个合约持仓信息</h3>
+<h3 id='c4b465bd44'>Get Position Info</h3>
 <p>获取某个合约的持仓信息</p>
 <h4 id='32b9b8d005-2'>Rate Limit</h4>
 <p>5 requests per second</p>
@@ -4785,7 +4783,7 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <p>IDAX solves this problem by heartbeat mechanism. The client-side can send a heartbeat data:{&quot;event&quot;:&quot;ping&quot;}, and the server will respond to the client-side:{&quot;event&quot;:&quot;pong&quot;} This shows that the connection is ok. If the client-side does not receive the heartbeat data from the server, the client-side needs to re-establish the connection.</p>
 <h1 id='731bbbbe4f'>Change Log</h1><h2 id='ca0f53a5da'>2019-10-25</h2>
 <ul>
-<li>New feature: search </li>
+<li>New feature: search function, support English and Chinese</li>
 <li>New Endpoint for Perpetual API</li>
 </ul>
 
