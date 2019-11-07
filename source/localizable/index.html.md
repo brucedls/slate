@@ -8,11 +8,12 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - python: Python
 
 natural_language: English
+home: 回到主页
 
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://idax.global'>回到主页</a>
+
 
 includes:
   - introduction

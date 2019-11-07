@@ -585,7 +585,7 @@ None
 
 #### Request
 
-`POST https://openapi.idax.pro/api/v2/ticker`
+`GET https://openapi.idax.pro/api/v2/ticker`
 
 
 

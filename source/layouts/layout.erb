@@ -30,6 +30,7 @@ under the License.
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <%= favicon_tag "favicon.ico" %>
     <title><%= current_page.data.title || "API Documentation" %></title>
 
     <style>
@@ -42,20 +43,20 @@ under the License.
     <% else %>
       <%= javascript_include_tag  "all_nosearch" %>
     <% end %>
+    
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
     
     <div class="navbar-container">      
       <nav class="navbar">
-        <a class="logo-container" href="">
+        <a class="logo-container" href="https://idax.global">
         <img src="//static.idaxstatic.com/pcimg/home/logoWhite20190228.svg" alt>
-        </a>   
-           
+        </a>              
         <% if natural_language == '中文' %>
-          <a href="/slate">
+          <a href="/">
             <button class="lang-picker">
-            中文
+            简体中文
             </button>
           </a>
           <%= natural_language %>
@@ -72,14 +73,10 @@ under the License.
     </div>  
     
     <a href="#" id="nav-button">
-      <span>
-        
+      <span>        
         <%= image_tag('navbar.png') %>
       </span>
-    </a>
-
-
-    
+    </a>    
     <div class="toc-wrapper">
       <%# <%= image_tag "logo.png", class: 'logo' %> 
       <% if language_tabs.any? %>
@@ -128,7 +125,13 @@ under the License.
         <ul class="toc-footer">
           <% current_page.data.toc_footers.each do |footer| %>
             <li><%= footer %></li>
+            
           <% end %>
+          <li class="toc-footer-end"> 
+            <a href='https://idax.global'>
+              <%= current_page.data.home %>
+            </a>
+          </li>
         </ul>
       <% end %>
     </div>

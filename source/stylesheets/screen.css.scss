@@ -54,7 +54,7 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 50px;
+  top: 48px;
   left: 0;
   bottom: 0;
   width: $nav-width;
@@ -83,7 +83,7 @@ html, body {
 
     input {
       background: $nav-bg;
-      border-width: 0 0 1px 0;
+      border: 1px solid;
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
@@ -91,13 +91,13 @@ html, body {
       width: $nav-width - ($nav-padding*2);
       outline: none;
       color: $nav-text;
-      border-radius: 0; /* ios has a default border radius */
+      border-radius: 22px; /* ios has a default border radius */
     }
 
     &:before {
       position: absolute;
-      top: 17px;
-      left: $nav-padding;
+      top: 19px;
+      left: 22px;
       color: $nav-text;
       @extend %icon-search;
     }
@@ -155,6 +155,7 @@ html, body {
   .toc-link.active {
     background-color: $nav-active-bg;
     color: $nav-active-text;
+    
   }
 
   // this is parent links of the currently selected ToC entry
@@ -165,6 +166,7 @@ html, body {
 
   .toc-list-h2 {
     display: none;
+    
     background-color: $nav-subitem-bg;
     font-weight: 500;
   }
@@ -192,6 +194,7 @@ html, body {
     li,a {
       color: $nav-text;
       text-decoration: none;
+      
     }
 
     a:hover {
@@ -201,6 +204,7 @@ html, body {
     li {
       font-size: 0.8em;
       line-height: 1.7;
+      
       text-decoration: none;
     }
   }
@@ -219,6 +223,17 @@ html, body {
   transition-duration: 130ms;
 }
 
+.toc-footer-end {
+  display: block;    
+  position: absolute;
+  margin:15px;
+  font-size:14px;
+  color: $nav-text;
+  border:1px solid rgba(#fff, 0.2);
+  border-radius: 14px;
+  
+}
+
 // button to show navigation on mobile devices
 #nav-button {
   span {
@@ -233,7 +248,7 @@ html, body {
   padding: 0 1.5em 5em 0; // increase touch size area
   display: none;
   position: fixed;
-  top: 50px;
+  top: 48px;
   left: 0;
   z-index: 100;
   color: #000;
@@ -260,7 +275,7 @@ html, body {
 .page-wrapper {
   margin-left: $nav-width;
   position: relative;
-  top:50px;
+  top:48px;
   z-index: 10;
   background-color: $main-bg;
   min-height: 100%;
@@ -274,7 +289,7 @@ html, body {
   // half of the content always this background color.
   .dark-box {
     width: $examples-width;
-    background-color: $examples-bg;
+    background-color: $nav-subitem-bg;
     position: absolute;
     right: 0;
     top: 0;
@@ -284,7 +299,7 @@ html, body {
   .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid $lang-select-active-bg;
+    border-bottom: 0px solid $lang-select-active-bg;
   }
 }
 
@@ -297,17 +312,21 @@ html, body {
     float:left;
     color: $lang-select-text;
     text-decoration: none;
+    text-align:center;
     padding: 0 10px;
     line-height: 30px;
+    width:70px;
     outline: 0;
 
     &:active, &:focus {
       background-color: $lang-select-pressed-bg;
+
       color: $lang-select-pressed-text;
     }
 
     &.active {
       background-color: $lang-select-active-bg;
+      border-bottom: 1px solid $lang-select-active-text;
       color: $lang-select-active-text;
     }
   }
@@ -330,6 +349,7 @@ html, body {
   // to place content above the dark box
   position: relative;
   z-index: 30;
+
 
   &:after {
     content: '';
@@ -356,6 +376,7 @@ html, body {
 
   h1 {
     @extend %header-font;
+    font-family: AvenirLTStd-Heavy, AvenirLTStd;
     font-size: 25px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -363,7 +384,7 @@ html, body {
     margin-top: 2em;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    background-color: #FFFFFF;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -420,10 +441,12 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
+    font-family: RobotoCondensed-Regular, RobotoCondensed;
     th,td {
       text-align: left;
       vertical-align: top;
       line-height: 1.6;
+      background:rgba(232,235,246,1);
       code {
         white-space: nowrap;
       }
@@ -437,14 +460,16 @@ html, body {
 
     td {
       padding: 10px;
+      border:1px solid rgba(232,235,246,1);
     }
 
     tr:last-child {
       border-bottom: 1px solid #ccc;
+      
     }
 
     tr:nth-child(odd)>td {
-      background-color: lighten($main-bg,4.2%);
+      background-color: lighten($main-bg,10%);
     }
 
     tr:nth-child(even)>td {
@@ -487,8 +512,12 @@ html, body {
     padding-bottom: 1em;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
-    background: $aside-notice-bg;
+    // background: $aside-notice-bg;
     line-height: 1.6;
+    &.notice {
+      background: $aside-notice-bg;
+
+    }
 
     &.warning {
       background-color: $aside-warning-bg;
@@ -521,8 +550,8 @@ html, body {
     padding: 2px;
     margin: -3px;
     border-radius: 4px;
-    border: 1px solid #F7E633;
-    background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
+    border: 1px solid #22E1F7;
+    background: linear-gradient(to top left, #22E1F7 0%, #22E1F7 100%);
   }
 }
 
@@ -538,8 +567,8 @@ html, body {
 	
 		position: fixed !important;
 		width: 100% !important;
-		height: 50px;
-		background: linear-gradient(90deg, #05183A, #0B2758);
+		height: 48px;
+		background: linear-gradient(90deg, #0A1D33, #0A1D33);
 		left: 0;
 		top: 0;
 		right: 0;
@@ -557,10 +586,14 @@ html, body {
   display: block;    
   position: absolute;
   top:12px;
-  background-color: #fff;
-  border-radius: 4px;
+  background-color: #0A1D33;
+  border: 1px solid rgba(255,255,255,0.24);
+  font-size:14px;
+  color: #FFFFFF;
+  border-radius: 14px;
   right:100px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 6px 0px;
+  
 }
 
 
@@ -688,4 +721,5 @@ html, body {
   }
   nav .logo-container img{
       height: 100%;
+      padding-left: 48px;
   }
