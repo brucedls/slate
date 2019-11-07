@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="../images/favicon.ico" rel="icon" type="image/ico" />
     <title>IDAX API Dodumentation</title>
 
     <style>
@@ -199,19 +200,19 @@
     <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
       <script src="../javascripts/all.js"></script>
+    
   </head>
 
   <body class="en en_index" data-languages="[&quot;java&quot;,&quot;go&quot;,&quot;c++&quot;,&quot;python&quot;]">
     
     <div class="navbar-container">      
       <nav class="navbar">
-        <a class="logo-container" href="">
+        <a class="logo-container" href="https://idax.global">
         <img src="//static.idaxstatic.com/pcimg/home/logoWhite20190228.svg" alt>
-        </a>   
-           
-          <a href="/slate">
+        </a>              
+          <a href="/">
             <button class="lang-picker">
-            中文
+            简体中文
             </button>
           </a>
           中文
@@ -221,14 +222,10 @@
     </div>  
     
     <a href="#" id="nav-button">
-      <span>
-        
+      <span>        
         <img src="../images/navbar.png" alt="Navbar" />
       </span>
-    </a>
-
-
-    
+    </a>    
     <div class="toc-wrapper">
         <div class="lang-selector">
               <a href="#" data-language-name="java">Java</a>
@@ -583,7 +580,12 @@
       </ul>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://idax.global'>Go back to the home page</a></li>
+            
+          <li class="toc-footer-end"> 
+            <a href='https://idax.global'>
+              Go back to home page
+            </a>
+          </li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -1899,7 +1901,7 @@ Order cancellation (batch cancellation supported)
 </tr>
 </tbody></table>
 <h3 id='5ed29f9011'>Get market tickers</h3><h4 id='02b6a89191-23'>Request</h4>
-<p><code>POST https://openapi.idax.pro/api/v2/ticker</code></p>
+<p><code>GET https://openapi.idax.pro/api/v2/ticker</code></p>
 <h4 id='02b6a89191-24'>Request</h4>
 <table><thead>
 <tr>
@@ -2876,14 +2878,14 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>instrument_id</td>
 <td>String</td>
 <td>Yes</td>
-<td style="text-align: center">Instrument ID，for example: BTC_USD</td>
+<td>Instrument ID，for example: BTC_USD</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6'>Response Parameters</h4>
@@ -2911,13 +2913,13 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>instrument_id</td>
 <td>String</td>
-<td style="text-align: center">Instrument ID，for example: BTC_USD</td>
+<td>Instrument ID，for example: BTC_USD</td>
 </tr>
 </tbody></table>
 <h3 id='c4b465bd44'>Get Position Info</h3>
@@ -2932,14 +2934,14 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>否</td>
-<td style="text-align: center">产品编号，如ETH/USDT</td>
+<td>产品编号，如ETH/USDT</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-2'>Response Parameters</h4>
@@ -2970,73 +2972,73 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>id</td>
 <td>long</td>
-<td style="text-align: center">持仓编号</td>
+<td>持仓编号</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>string</td>
-<td style="text-align: center">订单方向</td>
+<td>订单方向</td>
 </tr>
 <tr>
 <td>marginAmount</td>
 <td>double</td>
-<td style="text-align: center">保证金</td>
+<td>保证金</td>
 </tr>
 <tr>
 <td>averagePrice</td>
 <td>double</td>
-<td style="text-align: center">持仓均价</td>
+<td>持仓均价</td>
 </tr>
 <tr>
 <td>quantity</td>
 <td>double</td>
-<td style="text-align: center">持仓数量</td>
+<td>持仓数量</td>
 </tr>
 <tr>
 <td>flatQuantity</td>
 <td>double</td>
-<td style="text-align: center">可平数量（持仓数量-冻结数量）</td>
+<td>可平数量（持仓数量-冻结数量）</td>
 </tr>
 <tr>
 <td>frozenQuantity</td>
 <td>double</td>
-<td style="text-align: center">冻结数量</td>
+<td>冻结数量</td>
 </tr>
 <tr>
 <td>currentPrice</td>
 <td>double</td>
-<td style="text-align: center">公允价格</td>
+<td>公允价格</td>
 </tr>
 <tr>
 <td>winLoss</td>
 <td>double</td>
-<td style="text-align: center">盈亏</td>
+<td>盈亏</td>
 </tr>
 <tr>
 <td>winLossRate</td>
 <td>double</td>
-<td style="text-align: center">盈亏率</td>
+<td>盈亏率</td>
 </tr>
 </tbody></table>
 <h2 id='20671f8826'>Account</h2><h3 id='71a2ea5019'>账户资产信息</h3>
@@ -3068,48 +3070,48 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>coinCode</td>
 <td>string</td>
-<td style="text-align: center">币种code</td>
+<td>币种code</td>
 </tr>
 <tr>
 <td>availableAmount</td>
 <td>double</td>
-<td style="text-align: center">可用金额</td>
+<td>可用金额</td>
 </tr>
 <tr>
 <td>marginAmount</td>
 <td>double</td>
-<td style="text-align: center">已用金额</td>
+<td>已用金额</td>
 </tr>
 <tr>
 <td>frozenAmount</td>
 <td>double</td>
-<td style="text-align: center">冻结金额</td>
+<td>冻结金额</td>
 </tr>
 <tr>
 <td>winLoss</td>
 <td>double</td>
-<td style="text-align: center">浮动盈亏</td>
+<td>浮动盈亏</td>
 </tr>
 <tr>
 <td>riskRatio</td>
 <td>double</td>
-<td style="text-align: center">风险率</td>
+<td>风险率</td>
 </tr>
 </tbody></table>
 <h3 id='f6210940dc'>单个币种合约账户信息</h3>
@@ -3130,38 +3132,38 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>pageSize</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">页大小，默认为20</td>
+<td>页大小，默认为20</td>
 </tr>
 <tr>
 <td>pageNumber</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">当前页，默认为0</td>
+<td>当前页，默认为0</td>
 </tr>
 <tr>
 <td>transactionType</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">类型，默认为0</td>
+<td>类型，默认为0</td>
 </tr>
 <tr>
 <td>beginTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">开始时间</td>
+<td>开始时间</td>
 </tr>
 <tr>
 <td>endTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">结束时间</td>
+<td>结束时间</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-4'>Response Parameters</h4>
@@ -3183,38 +3185,38 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>coinCode</td>
 <td>string</td>
-<td style="text-align: center">币种code</td>
+<td>币种code</td>
 </tr>
 <tr>
 <td>transactionType</td>
 <td>int</td>
-<td style="text-align: center">类型</td>
+<td>类型</td>
 </tr>
 <tr>
 <td>amount</td>
 <td>double</td>
-<td style="text-align: center">金额</td>
+<td>金额</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>long</td>
-<td style="text-align: center">创建时间</td>
+<td>创建时间</td>
 </tr>
 </tbody></table>
 <h2 id='ad9e6284f0'>订单</h2><h3 id='0c922f87c9'>下单</h3>
@@ -3229,56 +3231,56 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>price</td>
 <td>double</td>
 <td>Yes</td>
-<td style="text-align: center">价格</td>
+<td>价格</td>
 </tr>
 <tr>
 <td>total</td>
 <td>double</td>
 <td>Yes</td>
-<td style="text-align: center">数量</td>
+<td>数量</td>
 </tr>
 <tr>
 <td>operationType</td>
 <td>int</td>
 <td>Yes</td>
-<td style="text-align: center">操作类型</td>
+<td>操作类型</td>
 </tr>
 <tr>
 <td>source</td>
 <td>int</td>
 <td>Yes</td>
-<td style="text-align: center">订单来源</td>
+<td>订单来源</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
 <td>Yes</td>
-<td style="text-align: center">订单方向</td>
+<td>订单方向</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>Yes</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>orderType</td>
 <td>int</td>
 <td>Yes</td>
-<td style="text-align: center">订单类型</td>
+<td>订单类型</td>
 </tr>
 <tr>
 <td>marginRatio</td>
 <td>double</td>
 <td>Yes</td>
-<td style="text-align: center">保证金比例</td>
+<td>保证金比例</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-5'>Response Parameters</h4>
@@ -3308,78 +3310,78 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>id</td>
 <td>long</td>
-<td style="text-align: center">订单ID</td>
+<td>订单ID</td>
 </tr>
 <tr>
 <td>price</td>
 <td>double</td>
-<td style="text-align: center">价格</td>
+<td>价格</td>
 </tr>
 <tr>
 <td>total</td>
 <td>double</td>
-<td style="text-align: center">数量</td>
+<td>数量</td>
 </tr>
 <tr>
 <td>operationType</td>
 <td>int</td>
-<td style="text-align: center">操作类型</td>
+<td>操作类型</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
-<td style="text-align: center">订单方向</td>
+<td>订单方向</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>orderType</td>
 <td>int</td>
-<td style="text-align: center">订单类型</td>
+<td>订单类型</td>
 </tr>
 <tr>
 <td>averagePrice</td>
 <td>double</td>
-<td style="text-align: center">成交均价</td>
+<td>成交均价</td>
 </tr>
 <tr>
 <td>fee</td>
 <td>double</td>
-<td style="text-align: center">手续费</td>
+<td>手续费</td>
 </tr>
 <tr>
 <td>marginRatio</td>
 <td>double</td>
-<td style="text-align: center">保证金比例</td>
+<td>保证金比例</td>
 </tr>
 <tr>
 <td>frozenMargin</td>
 <td>double</td>
-<td style="text-align: center">冻结保证金</td>
+<td>冻结保证金</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>long</td>
-<td style="text-align: center">下单时间</td>
+<td>下单时间</td>
 </tr>
 </tbody></table>
 <h3 id='76089293dd'>批量下单</h3>
@@ -3396,14 +3398,14 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>orderId</td>
 <td>long</td>
 <td>Yes</td>
-<td style="text-align: center">订单编号</td>
+<td>订单编号</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-6'>Response Parameters</h4>
@@ -3419,18 +3421,18 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 </tbody></table>
 <h3 id='ef5aaabaf8'>批量撤单</h3>
@@ -3451,14 +3453,14 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>否</td>
-<td style="text-align: center">产品编号，如ETH/USDT</td>
+<td>产品编号，如ETH/USDT</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-7'>Response Parameters</h4>
@@ -3488,63 +3490,63 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
-<td style="text-align: center">订单方向详情</td>
+<td>订单方向详情</td>
 </tr>
 <tr>
 <td>averagePrice</td>
 <td>double</td>
-<td style="text-align: center">成交均价</td>
+<td>成交均价</td>
 </tr>
 <tr>
 <td>lastAveragePrice</td>
 <td>double</td>
-<td style="text-align: center">持仓均价</td>
+<td>持仓均价</td>
 </tr>
 <tr>
 <td>quantityChange</td>
 <td>double</td>
-<td style="text-align: center">平仓数量</td>
+<td>平仓数量</td>
 </tr>
 <tr>
 <td>dealPrice</td>
 <td>double</td>
-<td style="text-align: center">平仓价</td>
+<td>平仓价</td>
 </tr>
 <tr>
 <td>winLoss</td>
 <td>double</td>
-<td style="text-align: center">盈亏</td>
+<td>盈亏</td>
 </tr>
 <tr>
 <td>winLossRate</td>
 <td>double</td>
-<td style="text-align: center">盈亏率</td>
+<td>盈亏率</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>long</td>
-<td style="text-align: center">平仓时间</td>
+<td>平仓时间</td>
 </tr>
 </tbody></table>
 <h3 id='071be79be8'>获取委托单列表</h3>
@@ -3559,14 +3561,14 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>否</td>
-<td style="text-align: center">产品编号，如ETH/USDT</td>
+<td>产品编号，如ETH/USDT</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-8'>Response Parameters</h4>
@@ -3599,83 +3601,83 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>id</td>
 <td>long</td>
-<td style="text-align: center">订单编号</td>
+<td>订单编号</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>operationType</td>
 <td>int</td>
-<td style="text-align: center">操作类型</td>
+<td>操作类型</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
-<td style="text-align: center">订单方向详情</td>
+<td>订单方向详情</td>
 </tr>
 <tr>
 <td>total</td>
 <td>double</td>
-<td style="text-align: center">委托数量</td>
+<td>委托数量</td>
 </tr>
 <tr>
 <td>price</td>
 <td>double</td>
-<td style="text-align: center">委托价格</td>
+<td>委托价格</td>
 </tr>
 <tr>
 <td>averagePrice</td>
 <td>double</td>
-<td style="text-align: center">成交均价</td>
+<td>成交均价</td>
 </tr>
 <tr>
 <td>frozenMargin</td>
 <td>double</td>
-<td style="text-align: center">冻结保证金</td>
+<td>冻结保证金</td>
 </tr>
 <tr>
 <td>filled</td>
 <td>double</td>
-<td style="text-align: center">成交数量</td>
+<td>成交数量</td>
 </tr>
 <tr>
 <td>marginRatio</td>
 <td>double</td>
-<td style="text-align: center">保证金比例</td>
+<td>保证金比例</td>
 </tr>
 <tr>
 <td>fee</td>
 <td>double</td>
-<td style="text-align: center">手续费</td>
+<td>手续费</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>long</td>
-<td style="text-align: center">委托时间</td>
+<td>委托时间</td>
 </tr>
 <tr>
 <td>orderStatus</td>
 <td>int</td>
-<td style="text-align: center">订单状态详情</td>
+<td>订单状态详情</td>
 </tr>
 </tbody></table>
 <h3 id='cd0ff6a5d6'>获取历史委托单列表</h3>
@@ -3690,38 +3692,38 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>否</td>
-<td style="text-align: center">产品编号，如ETH/USDT</td>
+<td>产品编号，如ETH/USDT</td>
 </tr>
 <tr>
 <td>pageSize</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">页大小，默认为20</td>
+<td>页大小，默认为20</td>
 </tr>
 <tr>
 <td>pageNumber</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">当前页，默认为0</td>
+<td>当前页，默认为0</td>
 </tr>
 <tr>
 <td>beginTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">开始时间 默认查全部，不为空时，后端自动向前推24小时</td>
+<td>开始时间 默认查全部，不为空时，后端自动向前推24小时</td>
 </tr>
 <tr>
 <td>endTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">结束时间 默认查全部，不为空时，后端自动向前推24小时</td>
+<td>结束时间 默认查全部，不为空时，后端自动向前推24小时</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-9'>Response Parameters</h4>
@@ -3749,68 +3751,68 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>orderId</td>
 <td>long</td>
-<td style="text-align: center">订单编号</td>
+<td>订单编号</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
-<td style="text-align: center">订单方向详情</td>
+<td>订单方向详情</td>
 </tr>
 <tr>
 <td>price</td>
 <td>double</td>
-<td style="text-align: center">委托价格</td>
+<td>委托价格</td>
 </tr>
 <tr>
 <td>averagePrice</td>
 <td>double</td>
-<td style="text-align: center">成交均价</td>
+<td>成交均价</td>
 </tr>
 <tr>
 <td>frozenMargin</td>
 <td>double</td>
-<td style="text-align: center">冻结保证金</td>
+<td>冻结保证金</td>
 </tr>
 <tr>
 <td>filled</td>
 <td>double</td>
-<td style="text-align: center">成交数量</td>
+<td>成交数量</td>
 </tr>
 <tr>
 <td>marginRatio</td>
 <td>double</td>
-<td style="text-align: center">保证金比例</td>
+<td>保证金比例</td>
 </tr>
 <tr>
 <td>fee</td>
 <td>double</td>
-<td style="text-align: center">手续费</td>
+<td>手续费</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>long</td>
-<td style="text-align: center">委托时间</td>
+<td>委托时间</td>
 </tr>
 </tbody></table>
 <h3 id='9ebc0ab78d'>获取历史平仓列表</h3>
@@ -3825,44 +3827,44 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>否</td>
-<td style="text-align: center">产品编号，如ETH/USDT</td>
+<td>产品编号，如ETH/USDT</td>
 </tr>
 <tr>
 <td>pageSize</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">页大小，默认为20</td>
+<td>页大小，默认为20</td>
 </tr>
 <tr>
 <td>pageNumber</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">当前页，默认为0</td>
+<td>当前页，默认为0</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">买卖方向</td>
+<td>买卖方向</td>
 </tr>
 <tr>
 <td>beginTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">开始时间 默认查全部，不为空时，后端自动向前推24小时</td>
+<td>开始时间 默认查全部，不为空时，后端自动向前推24小时</td>
 </tr>
 <tr>
 <td>endTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">结束时间 默认查全部，不为空时，后端自动向前推24小时</td>
+<td>结束时间 默认查全部，不为空时，后端自动向前推24小时</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-10'>Response Parameters</h4>
@@ -3891,58 +3893,58 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
-<td style="text-align: center">订单方向详情</td>
+<td>订单方向详情</td>
 </tr>
 <tr>
 <td>marginAmount</td>
 <td>double</td>
-<td style="text-align: center">保证金</td>
+<td>保证金</td>
 </tr>
 <tr>
 <td>averagePrice</td>
 <td>double</td>
-<td style="text-align: center">成交均价</td>
+<td>成交均价</td>
 </tr>
 <tr>
 <td>quantity</td>
 <td>double</td>
-<td style="text-align: center">平仓数量</td>
+<td>平仓数量</td>
 </tr>
 <tr>
 <td>dealPrice</td>
 <td>double</td>
-<td style="text-align: center">平仓价</td>
+<td>平仓价</td>
 </tr>
 <tr>
 <td>winLoss</td>
 <td>double</td>
-<td style="text-align: center">盈亏</td>
+<td>盈亏</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>long</td>
-<td style="text-align: center">平仓时间</td>
+<td>平仓时间</td>
 </tr>
 </tbody></table>
 <h3 id='665addac18'>获取历史成交列表</h3>
@@ -3957,20 +3959,20 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>string</td>
 <td>Yes</td>
-<td style="text-align: center">产品编号，如ETH/USDT</td>
+<td>产品编号，如ETH/USDT</td>
 </tr>
 <tr>
 <td>size</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">列表长度，默认为20</td>
+<td>列表长度，默认为20</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-11'>Response Parameters</h4>
@@ -3995,43 +3997,43 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>orderSide</td>
 <td>int</td>
-<td style="text-align: center">订单方向详情</td>
+<td>订单方向详情</td>
 </tr>
 <tr>
 <td>price</td>
 <td>double</td>
-<td style="text-align: center">成交较</td>
+<td>成交较</td>
 </tr>
 <tr>
 <td>qty</td>
 <td>double</td>
-<td style="text-align: center">成交数量</td>
+<td>成交数量</td>
 </tr>
 <tr>
 <td>time</td>
 <td>long</td>
-<td style="text-align: center">成交时间</td>
+<td>成交时间</td>
 </tr>
 </tbody></table>
 <h3 id='07b45d8691'>链类型列表</h3><h4 id='32b9b8d005-12'>Rate Limit</h4>
@@ -4044,20 +4046,20 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>String</td>
 <td>Yes</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>size</td>
 <td>int</td>
 <td>Yes</td>
-<td style="text-align: center">深度的数量</td>
+<td>深度的数量</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-12'>Response Parameters</h4>
@@ -4081,38 +4083,38 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>id</td>
 <td>long</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>String</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>price</td>
 <td>double</td>
-<td style="text-align: center">价格</td>
+<td>价格</td>
 </tr>
 <tr>
 <td>qty</td>
 <td>double</td>
-<td style="text-align: center">数量</td>
+<td>数量</td>
 </tr>
 </tbody></table>
 <h3 id='9ac80bc554'>获取深度数据</h3><h4 id='32b9b8d005-13'>Rate Limit</h4>
@@ -4125,20 +4127,20 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>String</td>
 <td>Yes</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>size</td>
 <td>int</td>
 <td>Yes</td>
-<td style="text-align: center">深度的数量</td>
+<td>深度的数量</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-13'>Response Parameters</h4>
@@ -4169,38 +4171,38 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>id</td>
 <td>long</td>
-<td style="text-align: center">产品编号</td>
+<td>产品编号</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>String</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>price</td>
 <td>double</td>
-<td style="text-align: center">价格</td>
+<td>价格</td>
 </tr>
 <tr>
 <td>qty</td>
 <td>double</td>
-<td style="text-align: center">数量</td>
+<td>数量</td>
 </tr>
 </tbody></table>
 <h2 id='7cd7cf771f'>Market Info</h2><h3 id='09aac6e14b'>获取行情数据</h3><h4 id='32b9b8d005-14'>Rate Limit</h4>
@@ -4239,78 +4241,78 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>timestamp</td>
 <td>long</td>
-<td style="text-align: center">时间</td>
+<td>时间</td>
 </tr>
 <tr>
 <td>open</td>
 <td>double</td>
-<td style="text-align: center">开盘价</td>
+<td>开盘价</td>
 </tr>
 <tr>
 <td>high</td>
 <td>double</td>
-<td style="text-align: center">最高价</td>
+<td>最高价</td>
 </tr>
 <tr>
 <td>low</td>
 <td>double</td>
-<td style="text-align: center">最低价</td>
+<td>最低价</td>
 </tr>
 <tr>
 <td>close</td>
 <td>double</td>
-<td style="text-align: center">关闭价</td>
+<td>关闭价</td>
 </tr>
 <tr>
 <td>volume</td>
 <td>double</td>
-<td style="text-align: center">成交数量</td>
+<td>成交数量</td>
 </tr>
 <tr>
 <td>amount</td>
 <td>double</td>
-<td style="text-align: center">成交金额</td>
+<td>成交金额</td>
 </tr>
 <tr>
 <td>change</td>
 <td>double</td>
-<td style="text-align: center">与上一条的变更</td>
+<td>与上一条的变更</td>
 </tr>
 <tr>
 <td>lastClose</td>
 <td>double</td>
-<td style="text-align: center">最新成交价格</td>
+<td>最新成交价格</td>
 </tr>
 <tr>
 <td>basePrice</td>
 <td>double</td>
-<td style="text-align: center">外部价格</td>
+<td>外部价格</td>
 </tr>
 <tr>
 <td>positionSum</td>
 <td>double</td>
-<td style="text-align: center">持仓</td>
+<td>持仓</td>
 </tr>
 </tbody></table>
 <h3 id='81f530eaa3'>获取K线数据</h3><h4 id='32b9b8d005-15'>Rate Limit</h4>
@@ -4323,32 +4325,32 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <th>Parameters</th>
 <th>Type</th>
 <th>Required</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>productCode</td>
 <td>String</td>
 <td>Yes</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>size</td>
 <td>int</td>
 <td>否</td>
-<td style="text-align: center">深度的数量</td>
+<td>深度的数量</td>
 </tr>
 <tr>
 <td>periodType</td>
 <td>String</td>
 <td>Yes</td>
-<td style="text-align: center">k线周期类型</td>
+<td>k线周期类型</td>
 </tr>
 <tr>
 <td>beginTime</td>
 <td>long</td>
 <td>否</td>
-<td style="text-align: center">开始时间</td>
+<td>开始时间</td>
 </tr>
 </tbody></table>
 <h4 id='577eaea8c6-15'>Response Parameters</h4>
@@ -4380,83 +4382,83 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 <tr>
 <th>Parameters</th>
 <th>Type</th>
-<th style="text-align: center">Description</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>success</td>
 <td>int</td>
-<td style="text-align: center">接口返回状态，0为成功</td>
+<td>接口返回状态，0为成功</td>
 </tr>
 <tr>
 <td>message</td>
 <td>string</td>
-<td style="text-align: center">接口返回描述</td>
+<td>接口返回描述</td>
 </tr>
 <tr>
 <td>productCode</td>
 <td>string</td>
-<td style="text-align: center">产品code</td>
+<td>产品code</td>
 </tr>
 <tr>
 <td>periodType</td>
 <td>string</td>
-<td style="text-align: center">周期类型</td>
+<td>周期类型</td>
 </tr>
 <tr>
 <td>timestamp</td>
 <td>long</td>
-<td style="text-align: center">时间</td>
+<td>时间</td>
 </tr>
 <tr>
 <td>open</td>
 <td>double</td>
-<td style="text-align: center">开盘价</td>
+<td>开盘价</td>
 </tr>
 <tr>
 <td>high</td>
 <td>double</td>
-<td style="text-align: center">最高价</td>
+<td>最高价</td>
 </tr>
 <tr>
 <td>low</td>
 <td>double</td>
-<td style="text-align: center">最低价</td>
+<td>最低价</td>
 </tr>
 <tr>
 <td>close</td>
 <td>double</td>
-<td style="text-align: center">关闭价</td>
+<td>关闭价</td>
 </tr>
 <tr>
 <td>volume</td>
 <td>double</td>
-<td style="text-align: center">成交数量</td>
+<td>成交数量</td>
 </tr>
 <tr>
 <td>amount</td>
 <td>double</td>
-<td style="text-align: center">成交金额</td>
+<td>成交金额</td>
 </tr>
 <tr>
 <td>lastClose</td>
 <td>double</td>
-<td style="text-align: center">最新成交价格</td>
+<td>最新成交价格</td>
 </tr>
 <tr>
 <td>changeAmount</td>
 <td>double</td>
-<td style="text-align: center">变更数量</td>
+<td>变更数量</td>
 </tr>
 <tr>
 <td>changeRatio</td>
 <td>double</td>
-<td style="text-align: center">变量率</td>
+<td>变量率</td>
 </tr>
 <tr>
 <td>basePrice</td>
 <td>double</td>
-<td style="text-align: center">外部价格</td>
+<td>外部价格</td>
 </tr>
 </tbody></table>
 <h1 id='478392e706'>REST API error code</h1><h2 id='41f8915de8'>Coin to Coin API error code</h2>
@@ -4768,15 +4770,15 @@ Y值为: 1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1we
 </tr>
 </tbody></table>
 <h1 id='eb9587312c'>REST API FAQs</h1>
-<ol>
+<ul>
 <li>API call limits</li>
-</ol>
+</ul>
 
 <p>Answer: An IP can send up to 10 https requests per second. If the number of requests exceeded 10, the IP will be blocked for one hour and automatically unblocked after an hour. Some interfaces also have API call frequency restrictions for the same key. Specific restrictions can be found in the relevant interfaces. If the API call frequency is lowered later. the access will be restored.</p>
 
-<ol>
+<ul>
 <li>The server returns error code 10000.</li>
-</ol>
+</ul>
 
 <p>Answer: Please check whether the parameters required by the interface are submitted to the server correctly, and then check whether the content type of the request header information is misconfigured as <code>&#39;application/x-www-form-urlencoded&#39;</code>.</p>
 <h1 id='7166afcc5a'>WebSocket API FAQs</h1><h2 id='4116190aff'>How to check the connection status?</h2>
